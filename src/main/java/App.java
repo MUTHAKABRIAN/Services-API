@@ -9,11 +9,15 @@ import spark.Request;
 import spark.Response;
 import spark.route.HttpMethod;
 
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import static spark.Spark.port;
 import static spark.Spark.post;
 import static spark.route.HttpMethod.get;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Sql2oCategoriesDao categoriesDao;
         Sql2oCleanerDao cleanerDao;
         Sql2oMaidDao maidDao;
@@ -24,10 +28,14 @@ public class App {
         String connectionString = "jdbc:h2:~/services.db;INIT=RUNSCRIPT from 'classpath:DB/create.sql'";
         Sql2o sql2o = new Sql2o(connectionString, "", "");
 
+//        DriverManager.getConnection("jdbc:h2:tcp://localhost/server~/services", "", "");
+
         categoriesDao = new Sql2oCategoriesDao(sql2o);
         cleanerDao = new Sql2oCleanerDao(sql2o);
         maidDao = new Sql2oMaidDao(sql2o);
         conn = sql2o.open();
+
+        port(7070);
 
 
         //New data entry in cleaners table in DB
@@ -47,15 +55,15 @@ public class App {
         });
 
         //Request for access of data in tables
-        get("/cleaner", "application/json", ((request, response) -> {
-            System.out.println(cleanerDao.getAll());
-            return gson.toJson(cleanerDao.getAll());
-        }));
-
-        get("/maid", "application/json", ((request, response) -> {
-            System.out.println(maidDao.getAll());
-            return gson.toJson(maidDao.getAll());
-        }));
+//        get("/cleaner", "application/json", ((request, response) -> {
+//            System.out.println(cleanerDao.getAll());
+//            return gson.toJson(cleanerDao.getAll());
+//        }));
+//
+//        get("/maid", "application/json", ((request, response) -> {
+//            System.out.println(maidDao.getAll());
+//            return gson.toJson(maidDao.getAll());
+//        }));
     }
 
 
