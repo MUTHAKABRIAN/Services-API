@@ -1,9 +1,14 @@
 package Dao;
 
-import Models.cleaner;
+import Models.Cleaner;
+
+import java.util.List;
 
 public interface CleanerDao {
 
     //cleaners
-    void add(cleaner cleaner);
+    void add(Cleaner cleaner);
+
+    //Read from the list of maids
+    List<Cleaner> getAll();
 }

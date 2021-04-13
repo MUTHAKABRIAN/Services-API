@@ -42,6 +42,6 @@ CREATE TABLE IF NOT EXISTS categories (
     electrician VARCHAR,
     carpet_cleaning VARCHAR,
     paint_man VARCHAR,
-)
+);
 
-CREATE DATABASE services;
+--CREATE DATABASE services_test WITH TEMPLATE services;

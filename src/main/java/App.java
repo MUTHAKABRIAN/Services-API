@@ -1,15 +1,22 @@
-import Dao.Sql2oCategoriesDao;
-import Dao.Sql2oCleanerDao;
+import Dao.*;
+import Models.Categories;
+import Models.Cleaner;
+import Models.Maid;
 import com.google.gson.Gson;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
+import spark.Request;
+import spark.Response;
+import spark.route.HttpMethod;
 
+import static spark.Spark.post;
 import static spark.route.HttpMethod.get;
 
 public class App {
     public static void main(String[] args) {
         Sql2oCategoriesDao categoriesDao;
         Sql2oCleanerDao cleanerDao;
+        Sql2oMaidDao maidDao;
         Connection conn;
         Gson gson = new Gson();
 
@@ -19,13 +26,36 @@ public class App {
 
         categoriesDao = new Sql2oCategoriesDao(sql2o);
         cleanerDao = new Sql2oCleanerDao(sql2o);
+        maidDao = new Sql2oMaidDao(sql2o);
         conn = sql2o.open();
 
 
-//        get("/categories", "application/json", (req, res) -> { //accept a request in format JSON from an app
-//            System.out.println(categoriesDao.getAll());
-//            return gson.toJson(categoriesDao.getAll());//send it back to be displayed
-//        });
+        //New data entry in cleaners table in DB
+        post("cleaner/new", "application/json", (request, response) -> {
+            Cleaner cleaner = gson.fromJson(request.body(), Cleaner.class);
+            cleanerDao.add(cleaner);
+            response.status(201);
+            return gson.toJson(cleaner);
+        });
+
+        //New data entry in maid table in DB
+        post("maid/new", "application/json", (request, response) -> {
+            Maid maid = gson.fromJson(request.body(), Maid.class);
+            maidDao.add(maid);
+            response.status(201);
+            return gson.toJson(maid);
+        });
+
+        //Request for access of data in tables
+        get("/cleaner", "application/json", ((request, response) -> {
+            System.out.println(cleanerDao.getAll());
+            return gson.toJson(cleanerDao.getAll());
+        }));
+
+        get("/maid", "application/json", ((request, response) -> {
+            System.out.println(maidDao.getAll());
+            return gson.toJson(maidDao.getAll());
+        }));
     }
 
 

@@ -1,20 +1,19 @@
 package Dao;
 
-import Models.categories;
+import Models.Categories;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public interface CategoriesDao {
 
     //categories
-    void add(categories categories);
+    void add(Categories categories);
 
     //Read from categories
-    ArrayList<categories> getAll();
+    ArrayList<Categories> getAll();
 
     //Read specific category by name
-    categories findCategoryByName(String category_name);
+    Categories findCategoryByName(String category_name);
 
     //Delete a category over time
     void deleteByName(String category_name);
