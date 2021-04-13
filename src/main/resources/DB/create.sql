@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS categories (
     plumbing VARCHAR,
     electrician VARCHAR,
     carpet_cleaning VARCHAR,
-    paint_man VARCHAR
+    paint_man VARCHAR,
 );
 
 CREATE TABLE IF NOT EXISTS plumber(
@@ -86,7 +86,4 @@ CREATE TABLE IF NOT EXISTS paint(
     email VARCHAR,
     rating float,
     description VARCHAR
-)
-
-
---CREATE DATABASE services;
+);
