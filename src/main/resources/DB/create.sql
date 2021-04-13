@@ -41,7 +41,52 @@ CREATE TABLE IF NOT EXISTS categories (
     plumbing VARCHAR,
     electrician VARCHAR,
     carpet_cleaning VARCHAR,
-    paint_man VARCHAR,
+    paint_man VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS plumber(
+   plumberId int PRIMARY KEY auto_increment,
+   plumber_name VARCHAR,
+   image VARCHAR,
+   physical_address VARCHAR,
+   phone_number int,
+   email VARCHAR,
+   rating float,
+   description VARCHAR
+
+
+);
+
+CREATE TABLE IF NOT EXISTS electrician(
+    electricianId int PRIMARY KEY auto_increment,
+    electrician_name VARCHAR,
+    image VARCHAR,
+    physical_address VARCHAR,
+    phone_number int,
+    email VARCHAR,
+    rating float,
+    description VARCHAR
+);
+CREATE TABLE IF NOT EXISTS carpet_clean(
+    ccId int PRIMARY KEY auto auto_increment,
+    cc_name VARCHAR,
+    image VARCHAR,
+    physical_address VARCHAR,
+    phone_number int,
+    email VARCHAR,
+    rating float,
+    description VARCHAR
+);
+CREATE TABLE IF NOT EXISTS paint(
+    painterId int PRIMARY KEY auto_increment,
+    painter_name VARCHAR,
+    image VARCHAR,
+    physical_address VARCHAR,
+    phone_number int,
+    email VARCHAR,
+    rating float,
+    description VARCHAR
 )
 
-CREATE DATABASE services;
+
+--CREATE DATABASE services;
