@@ -2,9 +2,9 @@ package Models;
 
 import java.util.Objects;
 
-public class MovingHelp {
-    private int moverId;
-    private String mover_name;
+public class maid {
+    private int maidId;
+    private String maid_name;
     private String image;
     private String physical_address;
     private int phone_number;
@@ -12,8 +12,8 @@ public class MovingHelp {
     private float rating;
     private String description;
 
-    public MovingHelp(String mover_name, String image, String physical_address, int phone_number, String email, float rating, String description) {
-        this.mover_name = mover_name;
+    public maid(String maid_name, String image, String physical_address, int phone_number, String email, float rating, String description) {
+        this.maid_name = maid_name;
         this.image = image;
         this.physical_address = physical_address;
         this.phone_number = phone_number;
@@ -25,23 +25,23 @@ public class MovingHelp {
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
-        if (!(obj instanceof MovingHelp)) return false;
-        MovingHelp MovingHelp = (Models.MovingHelp) obj;
-        return moverId == MovingHelp.moverId &&
-                Objects.equals(mover_name, MovingHelp.mover_name) &&
-                Objects.equals(image, MovingHelp.image) &&
-                Objects.equals(physical_address, MovingHelp.physical_address) &&
-                Objects.equals(phone_number, MovingHelp.phone_number) &&
-                Objects.equals(email, MovingHelp.email) &&
-                Objects.equals(rating, MovingHelp.rating) &&
-                Objects.equals(description, MovingHelp.description);
+        if (!(obj instanceof maid)) return false;
+        maid maid = (Models.maid) obj;
+        return maidId == maid.maidId &&
+                Objects.equals(maid_name, maid.maid_name) &&
+                Objects.equals(image, maid.image) &&
+                Objects.equals(physical_address, maid.physical_address) &&
+                Objects.equals(phone_number, maid.phone_number) &&
+                Objects.equals(email, maid.email) &&
+                Objects.equals(rating, maid.rating) &&
+                Objects.equals(description, maid.description);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(
-                moverId,
-                mover_name,
+                maidId,
+                maid_name,
                 image,
                 physical_address,
                 phone_number,
@@ -51,20 +51,20 @@ public class MovingHelp {
         );
     }
 
-    public int getMoverId() {
-        return moverId;
+    public int getMaidId() {
+        return maidId;
     }
 
-    public void setMoverId(int moverId) {
-        this.moverId = moverId;
+    public void setMaidId(int maidId) {
+        this.maidId = maidId;
     }
 
-    public String getMover_name() {
-        return mover_name;
+    public String getMaid_name() {
+        return maid_name;
     }
 
-    public void setMover_name(String mover_name) {
-        this.mover_name = mover_name;
+    public void setMaid_name(String maid_name) {
+        this.maid_name = maid_name;
     }
 
     public String getImage() {
