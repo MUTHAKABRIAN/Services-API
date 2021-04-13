@@ -5,6 +5,10 @@ import Models.Maid;
 import com.google.gson.Gson;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
+import Dao.Sql2oCarpetCleanDao;
+import Dao.Sql2oElectricianDao;
+import Dao.Sql2oPaintDao;
+import Dao.Sql2oPlumberDao;
 import spark.Request;
 import spark.Response;
 import spark.route.HttpMethod;
@@ -21,6 +25,15 @@ public class App {
         Sql2oCategoriesDao categoriesDao;
         Sql2oCleanerDao cleanerDao;
         Sql2oMaidDao maidDao;
+        Sql2oPlumberDao PlumberDao;
+        Sql2oCarpetCleanDao CarpetCleanDao;
+        Sql2oElectricianDao ElectricianDao;
+        Sql2oPaintDao paintDao;
+      
+      
+        paintDao =new Sql2oPaintDao(sql2o);
+       CarpetCleanDao = new Sql2oCarpetCleanDao(sql2o);
+       PlumberDao = new Sql2oPlumberDao(sql2o);
         Connection conn;
         Gson gson = new Gson();
 
@@ -64,6 +77,8 @@ public class App {
 //            System.out.println(maidDao.getAll());
 //            return gson.toJson(maidDao.getAll());
 //        }));
+
+
     }
 
 
