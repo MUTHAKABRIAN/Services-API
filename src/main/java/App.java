@@ -34,8 +34,12 @@ public class App {
         Gson gson = new Gson();
 
 //        Initialize Development Database (h2)
-        String connectionString = "jdbc:h2:~/services.db;INIT=RUNSCRIPT from 'classpath:DB/create.sql'";
-        Sql2o sql2o = new Sql2o(connectionString, "", "");
+//        String connectionString = "jdbc:h2:~/services.db;INIT=RUNSCRIPT from 'classpath:DB/create.sql'";
+//        Sql2o sql2o = new Sql2o(connectionString, "", "");
+
+        //Migration to actual production database
+        String connectionString = "jdbc:postgresql://localhost:5432/services"; //connect to newsportal, not newsportal_test!
+        Sql2o sql2o = new Sql2o(connectionString, "legit", "Access");  //Ubuntu Sql2o sql2o = new Sql2o(connectionString, "user", "1234");
 
 
         categoriesDao = new Sql2oCategoriesDao(sql2o);
