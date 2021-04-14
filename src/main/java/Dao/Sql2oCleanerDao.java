@@ -16,7 +16,7 @@ public class Sql2oCleanerDao implements CleanerDao {
 
     @Override
     public void add(Cleaner cleaner) {
-        String sql = "INSERT INTO cleaner (cleanerId, cleaner_name, image, physical_address, phone_number, email, rating, description) VALUES (:cleanerId, :cleaner_name, :image, :physical_address, :phone_number, :email, :rating, :description);";
+        String sql = "INSERT INTO cleaner ( cleaner_name, image, physical_address, phone_number, email, rating, description) VALUES (:cleanerId, :cleaner_name, :image, :physical_address, :phone_number, :email, :rating, :description);";
         try (Connection connection = sql2o.open()) {
             int cleanerId = (int) connection.createQuery(sql, true)
                     .bind(cleaner)

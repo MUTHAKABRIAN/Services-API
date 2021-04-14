@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS electrician(
     description VARCHAR
 );
 CREATE TABLE IF NOT EXISTS carpet_clean(
-    ccId int PRIMARY KEY auto auto_increment,
+    ccId int PRIMARY KEY auto_increment,
     cc_name VARCHAR,
     image VARCHAR,
     physical_address VARCHAR,

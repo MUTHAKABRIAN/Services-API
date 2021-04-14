@@ -17,7 +17,7 @@ public class Sql2oPlumberDao implements PlumberDao {
 
     @Override
     public void Add(Plumber plumber) {
-        String sql = "INSERT INTO plumber (plumberId, plumber_name,image,physical_address,email,rating, description) VALUES (:plumberId, :plumber_name,:image,:physical_address,:email,:rating, :description)";
+        String sql = "INSERT INTO plumber (plumber_name,image,physical_address, phone_number,email,rating, description) VALUES (:plumber_name,:image,:physical_address, :phone_number, :email,:rating, :description)";
         try (Connection conn = sql2o.open()) {
             int id = (int) conn.createQuery(sql, true)
                     .bind(plumber)

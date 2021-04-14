@@ -1,8 +1,5 @@
 import Dao.*;
-import Models.Categories;
-import Models.Cleaner;
-import Models.Maid;
-import Models.Plumber;
+import Models.*;
 import com.google.gson.Gson;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
@@ -29,30 +26,29 @@ public class App {
         Sql2oCleanerDao cleanerDao;
         Sql2oMaidDao maidDao;
         Sql2oPlumberDao PlumberDao;
-        Sql2oCarpetCleanDao CarpetCleanDao;
+        Sql2oCarpetCleanDao carpetCleanDao;
         Sql2oElectricianDao ElectricianDao;
         Sql2oPaintDao paintDao;
 
-
-        Sql2o sql2o = null;
-        paintDao = new Sql2oPaintDao(sql2o);
-        CarpetCleanDao = new Sql2oCarpetCleanDao(sql2o);
-        PlumberDao = new Sql2oPlumberDao(sql2o);
-        ElectricianDao = new Sql2oElectricianDao(sql2o);
         Connection conn;
         Gson gson = new Gson();
 
 //        Initialize Development Database (h2)
         String connectionString = "jdbc:h2:~/services.db;INIT=RUNSCRIPT from 'classpath:DB/create.sql'";
-        sql2o = new Sql2o(connectionString, "", "");
+        Sql2o sql2o = new Sql2o(connectionString, "", "");
 
 
         categoriesDao = new Sql2oCategoriesDao(sql2o);
         cleanerDao = new Sql2oCleanerDao(sql2o);
         maidDao = new Sql2oMaidDao(sql2o);
+        carpetCleanDao = new Sql2oCarpetCleanDao(sql2o);
+        paintDao = new Sql2oPaintDao(sql2o);
+        PlumberDao = new Sql2oPlumberDao(sql2o);
+        ElectricianDao = new Sql2oElectricianDao(sql2o);
         conn = sql2o.open();
 
         port(7070);
+
 
 
         //New data entry in cleaners table in DB
@@ -70,13 +66,40 @@ public class App {
             response.status(201);
             return gson.toJson(maid);
         });
+        post("carpet_clean/new", "application/json", (request, response) -> {
+            CarpetClean carpet_clean = gson.fromJson(request.body(), CarpetClean.class);
+            carpetCleanDao.Add(carpet_clean);
+            response.status(201);
+            return gson.toJson(carpet_clean);
+        });
+
+        post("plumber/new", "application/json", (request, response) -> {
+            Plumber plumber = gson.fromJson(request.body(), Plumber.class);
+            PlumberDao.Add(plumber);
+            response.status(201);
+            return gson.toJson(plumber);
+        });
+
+        post("paint/new", "application/json", (request, response) -> {
+            Paint paint = gson.fromJson(request.body(), Paint.class);
+            paintDao.Add(paint);
+            response.status(201);
+            return gson.toJson(paint);
+        });
+
+        post("electrician/new", "application/json", (request, response) -> {
+            Electrician electrician = gson.fromJson(request.body(), Electrician.class);
+            ElectricianDao.Add(electrician);
+            response.status(201);
+            return gson.toJson(electrician);
+        });
 
         //Request for access of data in tables
         get("/cleaner", "application/json", ((request, response) -> {
             System.out.println(cleanerDao.getAll());
             return gson.toJson(cleanerDao.getAll());
         }));
-//
+
 
         get("/electrician","application/json", (request, response) -> {
             System.out.println(ElectricianDao.getAll());
@@ -89,8 +112,13 @@ public class App {
         });
 
         get("/carpet_clean","application/json", (request, response) -> {
-            System.out.println(CarpetCleanDao.getAll());
-            return gson.toJson(CarpetCleanDao.getAll());
+            System.out.println(carpetCleanDao.getAll());
+            return gson.toJson(carpetCleanDao.getAll());
+        });
+
+        get("/paint","application/json", (request, response) -> {
+            System.out.println(paintDao.getAll());
+            return gson.toJson(paintDao.getAll());
         });
 
     }
