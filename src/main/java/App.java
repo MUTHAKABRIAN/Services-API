@@ -6,6 +6,10 @@ import Models.MovingHelp;
 import com.google.gson.Gson;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
+import Dao.Sql2oCarpetCleanDao;
+import Dao.Sql2oElectricianDao;
+import Dao.Sql2oPaintDao;
+import Dao.Sql2oPlumberDao;
 import spark.Request;
 import spark.Response;
 import spark.route.HttpMethod;
@@ -24,6 +28,12 @@ public class App {
         Sql2oCleanerDao cleanerDao;
         Sql2oMaidDao maidDao;
         Sql2oMovingDao movingDao;
+        Sql2oPlumberDao PlumberDao;
+        Sql2oCarpetCleanDao CarpetCleanDao;
+        Sql2oElectricianDao ElectricianDao;
+        Sql2oPaintDao paintDao;
+
+
         Connection conn;
         Gson gson = new Gson();
 
@@ -37,6 +47,9 @@ public class App {
         cleanerDao = new Sql2oCleanerDao(sql2o);
         maidDao = new Sql2oMaidDao(sql2o);
         movingDao = new Sql2oMovingDao(sql2o);
+        paintDao = new Sql2oPaintDao(sql2o);
+        CarpetCleanDao = new Sql2oCarpetCleanDao(sql2o);
+        PlumberDao = new Sql2oPlumberDao(sql2o);
         conn = sql2o.open();
 
         port(6060);
@@ -81,7 +94,6 @@ public class App {
             return gson.toJson(movingDao.getAll());
         }));
 
-        //get specific cleaner by name.
     }
 
 

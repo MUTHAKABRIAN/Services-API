@@ -25,10 +25,30 @@
       <change beforePath="$PROJECT_DIR$/build/distributions/Service-API-1.0-SNAPSHOT.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/Service-API-1.0-SNAPSHOT.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/Service-API-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Service-API-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/java/Dao/CleanerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/CleanerDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Dao/MovingHelpDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/MovingHelpDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Sql2oCleanerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/Sql2oCleanerDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Sql2oMovingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/Sql2oMovingDao.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/CleanerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/MaidDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/MovingHelpDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/Sql2oCleanerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/Sql2oMaidDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/Sql2oMovingDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exception/ApiException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Cleaner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Maid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/MovingHelp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DB/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DB/create.sql" afterDir="false" />
+>>>>>>> 3525c47adc468b02efdc9944a3c659f7f3c00879
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +64,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
         <option value="Interface" />
       </list>
@@ -58,6 +79,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
