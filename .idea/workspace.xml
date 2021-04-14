@@ -10,34 +10,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Dao/Sql2oCategoriesDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Dao/Sql2oCategoriesDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Dao/Sql2oCleanerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Dao/Sql2oCleanerDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Dao/Sql2oMaidDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Dao/Sql2oMaidDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Models/Categories.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Models/Categories.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Models/Cleaner.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Models/Cleaner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Models/Maid.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Models/Maid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/distributions/Service-API-1.0-SNAPSHOT.tar" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/Service-API-1.0-SNAPSHOT.tar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/distributions/Service-API-1.0-SNAPSHOT.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/Service-API-1.0-SNAPSHOT.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/Service-API-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Service-API-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Exception/ApiException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Exception/ApiException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/DB/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/DB/create.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/CleanerDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/MaidDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/MovingHelpDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/Sql2oCleanerDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/Sql2oMaidDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/Sql2oMovingDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exception/ApiException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Cleaner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Maid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/MovingHelp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DB/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DB/create.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
