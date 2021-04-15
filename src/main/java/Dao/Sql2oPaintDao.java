@@ -16,7 +16,11 @@ public class Sql2oPaintDao implements paintDao {
 
     @Override
     public void Add(Paint paint) {
+<<<<<<< HEAD
+        String sql = "INSERT INTO paint (painter_name,image,physical_address,phone_number,email,rating, description) VALUES (:painter_name,:image,:physical_address, :phone_number, :email,:rating, :description)";
+=======
         String sql = "INSERT INTO electrician (painter_name,image,physical_address,email,rating, description) VALUES (:painter_name,:image,:physical_address,:email,:rating, :description)";
+>>>>>>> a51d29ffc0aeaf5abfc8f01ccfcbd11f66c4a36e
         try (Connection conn = sql2o.open()) {
             int id = (int) conn.createQuery(sql, true)
                     .bind(paint)

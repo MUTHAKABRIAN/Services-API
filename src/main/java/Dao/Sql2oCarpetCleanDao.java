@@ -17,7 +17,7 @@ public class Sql2oCarpetCleanDao implements CarpetCleanDao {
 
     @Override
     public void Add(CarpetClean carpetClean) {
-        String sql = "INSERT INTO carpet_clean(ccId, cc_name,image,physical_address,email,rating, description) VALUES (:ccId, :cc_name,:image,:physical_address,:email,:rating, :description)";
+        String sql = "INSERT INTO carpet_clean(cc_name,image,physical_address,phone_number, email,rating, description) VALUES (:cc_name, :image, :physical_address, :phone_number, :email, :rating, :description);";
         try (Connection conn = sql2o.open()) {
             int id = (int) conn.createQuery(sql, true)
                     .bind(carpetClean)

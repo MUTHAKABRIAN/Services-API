@@ -15,16 +15,16 @@ public class Sql2oElectricianDao implements ElectricianDao {
         this.sql2o = sql2o;
     }
 
+
     @Override
     public void Add(Electrician electrician) {
         String sql = "INSERT INTO electrician (electrician_name,image,physical_address,email,rating, description) VALUES (:electrician_name,:image,:physical_address,:email,:rating, :description)";
         try (Connection conn = sql2o.open()) {
-            int id = (int) conn.createQuery(sql, true)
+            int electricianId = (int) conn.createQuery(sql, true)
                     .bind(electrician)
                     .executeUpdate()
                     .getKey();
-            electrician.setElectricianId(id);
-
+            electrician.setElectricianId(electricianId);
         } catch (Sql2oException ex) {
             System.out.println(ex);
         }
